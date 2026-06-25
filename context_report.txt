@@ -1,0 +1,195 @@
+
+=======================================
+QUERY: what is neural network?
+=======================================
+Retrieved 5 unique pages:
+- documentation.pdf (Page 21)
+- documentation.pdf (Page 19)
+- documentation.pdf (Page 14)
+- documentation.pdf (Page 7)
+- documentation.pdf (Page 9)
+
+--- Context block: documentation.pdf (Page 21) ---
+SSD (Single Shot Detector)
+• Faster than traditional methods
+• Medium accuracy
+• Lightweight
+Faster R-CNN
+• Two-stage detector
+• Very accurate
+• Slower → not ideal for real-time robotics
+YOLO Working (Core Understanding)
+YOLO divides image into a grid and predicts:
+• Bounding boxes
+• Class probabilities
+Output:
+Object: Person
+Confidence: 92%
+Box: (x, y, w, h)
+Implementation Workflow (Practical) Tools:
+• Python
+• OpenCV
+• PyTorch
+• Ultralytics YOLOv8
+Steps:
+1. Install YOLO
+2. Load pretrained model
+3. Capture camera feed
+4. Run detection
+5. Display results
+
+--- Context block: documentation.pdf (Page 19) ---
+[Image Description: [Visual element failed to process]]
+Detection = balance between speed + accuracy
+Working Pipeline
+1. Input Image (Camera)
+2. Preprocessing (resize, normalize)
+3. Feature Extraction (CNN)
+4. Detection Model
+5. Bounding Boxes + Labels + Confidence
+6. Output Image
+Key Concept: Model predicts:
+o Object class
+o Location (x, y, width, height)
+o Confidence score
+Popular Object Detection Models
+YOLO (You Only Look Once)
+
+--- Context block: documentation.pdf (Page 14) ---
+[Image Description: [Visual element failed to process]]
+4. Working Pipeline of Image Segmentation
+1. Input Image
+2. Pre-processing (resize, normalization)
+3. Feature Extraction (CNN backbone)
+4. Segmentation Model
+5. Pixel-wise Classification
+6. Output Mask
+
+--- Context block: documentation.pdf (Page 7) ---
+[Image Description: [Visual element failed to process]]
+Key Features:
+• Up to 40 TOPS AI performance
+• Real-time object detection
+• Multi-model inference
+Why Important?
+Enables:
+• Autonomous navigation
+• Object tracking
+• Smart decision making
+
+--- Context block: documentation.pdf (Page 9) ---
+[Image Description: [Visual element failed to process]]
+Models:
+• U-Net
+• Mask R-CNN
+• DeepLab
+Use in Robot:
+• Detect road/path
+• Identify obstacles
+• Scene understanding
+11. System Integration (MOST IMPORTANT)
+Architecture
+Layer Component
+Perception Camera, IMU, Mic
+Processing Jetson Orin Nano
+AI Models Detection, Segmentation, Whisper
+Control Arduino Nano
+
+=======================================
+QUERY: what is input space?
+=======================================
+Retrieved 5 unique pages:
+- documentation.pdf (Page 14)
+- documentation.pdf (Page 11)
+- test2.pdf (Page 2)
+- test2.pdf (Page 2)
+- documentation.pdf (Page 36)
+
+--- Context block: documentation.pdf (Page 14) ---
+[Image Description: [Visual element failed to process]]
+4. Working Pipeline of Image Segmentation
+1. Input Image
+2. Pre-processing (resize, normalization)
+3. Feature Extraction (CNN backbone)
+4. Segmentation Model
+5. Pixel-wise Classification
+6. Output Mask
+
+--- Context block: documentation.pdf (Page 11) ---
+[Image Description: [Visual element failed to process]]
+Image Segmentation
+Image Segmentation is a computer vision technique where an image is divided into multiple
+regions, and each pixel is assigned a label representing a specific object or class.
+Why Image Segmentation is Important
+In robotics (especially your 4-wheel autonomous robot):
+• Helps in environment understanding
+• Enables path planning
+• Improves obstacle avoidance
+• Supports autonomous navigation
+Example:
+• Road → safe path
+• Wall → obstacle
+• Human → avoid
+
+--- Context block: test2.pdf (Page 2) ---
+
+
+--- Context block: test2.pdf (Page 2) ---
+# Unclassified Table Data Description
+
+- **Summary**: This document outlines the technical framework for a vector-based semantic retrieval system and a PyTorch-based intent classification neural pipeline used in Campus Cred, detailing how user queries are processed, routed to an LLM, and categorized by intent.
+- **Detected Columns**: Section Titles, Mathematical Equations, Conceptual Process Description, Neural Network Architecture Stages
+
+## Raw Description:
+The table is structured as a vertical layout of text blocks describing two technical sections: mathematical modeling of vector context routing and a deep learning neural pipeline. It includes descriptive headers (sections 3 and 4), mathematical formulas for cosine similarity, conceptual descriptions of the retrieval process, and a textual representation of a neural network layer architecture.
+
+3. Mathematical Modeling of Vector Context Routing
+To perform accurate semantic retrieval from the vector database, user queries are mapped into an
+institutional embeddings space. Let the user query be represented by an embedding vector Q and
+document chunk vectors within the knowledge space be defined as D.
+i
+The semantic relevance scoring function relies on standard Cosine Similarity calculations to measure
+proximity within the Hilbert space. The computation is formalized as follows:
+Similarity(Q, D) = (Q · D) / (||Q|| × ||D||)
+i i i
+Where the inner product maximizes as the angular separation approaches zero, indicating perfect
+semantic alignment. The system selects the top k contexts where Similarity ≥ λ, routing them seamlessly
+into the LLM context prompt template window.
+4. Deep
+ic alignment. The system selects the top k contexts where Similarity ≥ λ, routing them seamlessly
+into the LLM context prompt template window.
+4. Deep Learning Neural Pipeline (PyTorch Optimization)
+For customizable institutional telemetry tagging, Campus Cred introduces an intent classification step
+built natively using PyTorch. This deep learning system categorizes user motivations into discrete
+channels (e.g., academic, administrative, fee-related, emergency) prior to document query execution.
+InputSpace Linear(ReLU) Linear(Dropout) Logits(Softmax)
+Diagram 1.2: Fully-connected feedforward multi-layer intent classification neural net topology.
+Campus Cred AI System Architecture Report Page 2 of 3
+
+--- Context block: documentation.pdf (Page 36) ---
+Services
+Services contain application logic.
+Responsibilities:
+• Process input images
+• Call models
+• Save outputs
+• Format responses
+Inference Layer
+Inference files act as wrappers around the actual models.
+Examples:
+RFDETRInference
+Mask2FormerInference
+They isolate model-specific logic from the API.
+Core Model Layer
+The core layer manages model loading.
+Responsibilities:
+• Load model once
+• Maintain singleton instance
+• Prevent repeated initialization
+• Improve performance
+Supported Inputs
+The API supports:
+Images
+• JPG
+• JPEG
+• PNG

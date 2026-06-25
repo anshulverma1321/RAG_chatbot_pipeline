@@ -1,0 +1,31 @@
+# Environment
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Outputs
+outputs/
+
+# Vector DB
+vectorstore/
+qdrant_storage/
+chroma_db/
+
+# Models
+models/
+*.onnx
+*.bin
+*.pt
+*.pth
+
+# IDE
+.vscode/
+.idea/
